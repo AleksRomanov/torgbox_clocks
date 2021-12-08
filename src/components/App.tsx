@@ -1,15 +1,16 @@
 import React from 'react';
-import {Route, BrowserRouter, Routes} from 'react-router-dom';
-import Main from './main';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
 function App(): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Main/>}/>
+        {/*<Route path="/" element={<Main/>}/>*/}
+        <Route path="/"/>
       </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
+
