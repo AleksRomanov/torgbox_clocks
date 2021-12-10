@@ -1,7 +1,6 @@
-import React from 'react';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
-function App(): JSX.Element {
+export default function App(): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
@@ -11,6 +10,4 @@ function App(): JSX.Element {
     </BrowserRouter>
   );
 }
-
-export default App;
 

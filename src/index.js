@@ -1,19 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import './index.css';
 import App from './components/App';
-import {Provider} from 'react-redux';
-import {store} from './store/store';
-import * as serviceWorker from './serviceWorker';
+import register from './registerServiceWorker';
 
-
-ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App/>
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById('root'));
-
-serviceWorker.unregister();
-
+ReactDOM.render(<App />, document.getElementById('root'));
+register();

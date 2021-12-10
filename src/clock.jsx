@@ -3,6 +3,7 @@ import * as React from 'react';
 export default class Clock extends React.Component {
   clockInterval = '';
 
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   constructor(props) {
     super(props);
     this.handleDate = this.handleDate.bind(this);
@@ -13,15 +14,18 @@ export default class Clock extends React.Component {
     };
   }
 
-  componentDidMount(): boolean {
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  componentDidMount() {
     this.clockInterval = setInterval(this.handleDate, 1000);
   }
 
-  componentWillUnmount(): boolean {
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  componentWillUnmount() {
     clearInterval(this.clockInterval);
   }
 
-  render(): void {
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  render() {
     const {hours, minutes, seconds} = this.state;
     const secondsStyle = {
       transform: `rotate(${seconds * 6}deg)`,

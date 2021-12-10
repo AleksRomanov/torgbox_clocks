@@ -1,11 +1,12 @@
 import React from 'react';
 
-function Clock() {
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+function Clock(hourRatio, minuteRatio, secondRatio) {
   return (
     <div className="clock">
-      <div className="hand hour"></div>
-      <div className="hand minute"></div>
-      <div className="hand second"></div>
+      <div className="hand hour" style={{transform: `translate(-50%) rotate(${hourRatio * 360})`}}/>
+      <div className="hand minute" style={{transform: `translate(-50%) rotate(${minuteRatio * 360})`}}/>
+      <div className="hand second" style={{transform: `translate(-50%) rotate(${secondRatio * 360})`}}/>
       <div className="number number1">
         <div>1</div>
       </div>
