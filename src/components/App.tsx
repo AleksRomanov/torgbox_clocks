@@ -1,14 +1,9 @@
-import * as React from 'react';
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import Clock from './clock/clock';
 
-export default function App(): JSX.Element {
+function App(): JSX.Element {
   return (
-    <BrowserRouter>
-      <Routes>
-        {/*<Route path="/" element={<Main/>}/>*/}
-        <Route path="/"/>
-      </Routes>
-    </BrowserRouter>
+    <Clock/>
   );
 }
 
+export default App;

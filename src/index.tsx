@@ -1,22 +1,9 @@
-import {render} from 'react-dom';
-import {
-  Backdrop,
-  OuterClock,
-  SecondHand,
-  MinuteHand,
-  HourHand
-} from './clockStyles';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './components/App';
 
-function App(): JSX.Element {
-  return (
-    <Backdrop>
-      <OuterClock>
-        <SecondHand/>
-        <MinuteHand/>
-        <HourHand/>
-      </OuterClock>
-    </Backdrop>
-  );
-}
-
-render(<App/>, document.getElementById('root'));
+ReactDOM.render(
+  <React.StrictMode>
+    <App/>
+  </React.StrictMode>,
+  document.getElementById('root'));
