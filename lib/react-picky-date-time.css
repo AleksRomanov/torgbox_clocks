@@ -1,22 +1,16 @@
 .forwardEnter {
   will-change: transform;
-  -webkit-transition: opacity .5s ease-in, -webkit-transform .3s;
-  transition: opacity .5s ease-in, -webkit-transform .3s;
   transition: opacity .5s ease-in, transform .3s;
-  transition: opacity .5s ease-in, transform .3s, -webkit-transform .3s;
   opacity: 1;
-  -webkit-transform: translate3d(100%, 0, 0);
   transform: translate3d(100%, 0, 0)
 }
 
 .forwardEnter.forwardEnterActive {
-  -webkit-transform: translateZ(0);
   transform: translateZ(0)
 }
 
 .forwardLeave {
   opacity: 1;
-  -webkit-transition: opacity .5s ease-in;
   transition: opacity .5s ease-in
 }
 
@@ -26,11 +20,7 @@
 
 .backwardLeave {
   will-change: transform, opacity;
-  -webkit-transition: -webkit-transform .3s ease-in;
-  transition: -webkit-transform .3s ease-in;
   transition: transform .3s ease-in;
-  transition: transform .3s ease-in, -webkit-transform .3s ease-in;
-  -webkit-transform: translate3d(100%, 0, 0);
   transform: translate3d(100%, 0, 0)
 }
 
@@ -57,7 +47,6 @@
 .picky-date-time-calendar__body-container {
   position: relative;
   display: block;
-  -webkit-transition: height .3s;
   transition: height .3s;
   overflow: hidden;
   text-align: center
@@ -84,78 +73,52 @@
 }
 
 .slide-enter {
-  -webkit-transform: translateX(100%);
   transform: translateX(100%);
-  -webkit-transition: -webkit-transform .3s ease-in-out;
-  transition: -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
-  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out
+  transition: transform .3s ease-in-out
 }
 
 .slide-enter-active, .slide-leave {
-  -webkit-transform: translateX(0);
   transform: translateX(0)
 }
 
 .slide-leave {
-  -webkit-transition: -webkit-transform .3s ease-in-out;
-  transition: -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
-  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out
+  transition: transform .3s ease-in-out
 }
 
 .slide-leave-active {
-  -webkit-transform: translateX(-100%);
   transform: translateX(-100%)
 }
 
 .forward-enter {
-  -webkit-transform: translateX(100%);
   transform: translateX(100%);
-  -webkit-transition: -webkit-transform .3s ease-in-out;
-  transition: -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
-  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out
+  transition: transform .3s ease-in-out
 }
 
 .forward-enter-active, .forward-leave {
-  -webkit-transform: translateX(0);
   transform: translateX(0)
 }
 
 .forward-leave {
-  -webkit-transition: -webkit-transform .3s ease-in-out;
-  transition: -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
-  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out
+  transition: transform .3s ease-in-out
 }
 
 .backward-enter, .forward-leave-active {
-  -webkit-transform: translateX(-100%);
   transform: translateX(-100%)
 }
 
 .backward-enter {
-  -webkit-transition: -webkit-transform .3s ease-in-out;
-  transition: -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
-  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out
+  transition: transform .3s ease-in-out
 }
 
 .backward-enter-active, .backward-leave {
-  -webkit-transform: translateX(0);
   transform: translateX(0)
 }
 
 .backward-leave {
-  -webkit-transition: -webkit-transform .3s ease-in-out;
-  transition: -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
-  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out
+  transition: transform .3s ease-in-out
 }
 
 .backward-leave-active {
-  -webkit-transform: translateX(100%);
   transform: translateX(100%)
 }
 
@@ -164,9 +127,7 @@
 }
 
 .picky-date-time-dropdown.visible .picky-date-time-dropdown-calendar__menu {
-  -webkit-transform: translate3d(-50%, 0, 0) scaleX(1);
   transform: translate3d(-50%, 0, 0) scaleX(1);
-  -webkit-transform: translate(-50%) scale(1) \9;
   transform: translate(-50%) scale(1) \9;
   opacity: 1;
   padding: 10px;
@@ -179,9 +140,7 @@
 
 .picky-date-time-dropdown .picky-date-time-dropdown-calendar__menu {
   will-change: transform, opacity;
-  -webkit-transform: translate3d(-50%, 0, 0) scaleY(0);
   transform: translate3d(-50%, 0, 0) scaleY(0);
-  -webkit-transform: translate(-50%) scaleY(0) \9;
   transform: translate(-50%) scaleY(0) \9;
   opacity: 0;
   left: 50%
@@ -204,14 +163,9 @@
 
 .picky-date-time-dropdown .picky-date-time-dropdown-calendar__menu {
   text-align: center;
-  -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
-  -webkit-transition: opacity .2s, -webkit-transform .4s;
-  transition: opacity .2s, -webkit-transform .4s;
   transition: transform .4s, opacity .2s;
-  transition: transform .4s, opacity .2s, -webkit-transform .4s;
   position: absolute;
-  -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .3), 0 0 1px 0 rgba(0, 0, 0, .12);
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .3), 0 0 1px 0 rgba(0, 0, 0, .12);
   background: #fff
 }
@@ -225,7 +179,6 @@
 .picky-date-time-dropdown .picky-date-time-dropdown-calendar__item {
   padding: 1px 4px;
   line-height: 20px;
-  -webkit-transition: background .4s;
   transition: background .4s;
   cursor: pointer;
   display: block
@@ -259,7 +212,6 @@
   font-size: 12px;
   margin: 5px;
   background: #fff;
-  -webkit-transition: all .3s;
   transition: all .3s
 }
 
@@ -302,7 +254,6 @@
   margin: 2px;
   font-size: 14px;
   background: #fff;
-  -webkit-transition: all .3s;
   transition: all .3s
 }
 
@@ -430,7 +381,6 @@
   height: 40px;
   padding: 10px;
   cursor: default;
-  -webkit-transition: all .3s;
   transition: all .3s;
   background: #fff;
   color: #495057;
@@ -489,7 +439,6 @@
   border-radius: 50%;
   left: 50%;
   bottom: 3px;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%)
 }
 
@@ -555,7 +504,6 @@
   cursor: pointer;
   padding: 5px 10px;
   border: 1px solid #ced4da;
-  -webkit-transition: all .3s;
   transition: all .3s;
   background: #fff
 }
@@ -634,7 +582,6 @@
   position: absolute;
   right: 10px;
   top: 50%;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%)
 }
 
@@ -642,7 +589,6 @@
   position: relative;
   border: 1px solid #adb5bd;
   border-radius: 50%;
-  -webkit-box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 18px auto 0
 }
@@ -687,22 +633,18 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
   -webkit-font-smoothing: antialiased;
-  -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%
 }
 
 .picky-date-time-clock__clock-center {
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: #fff;
   border: 2px solid #868e96;
-  -webkit-box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.5);
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.5);
   z-index: 5
 }
@@ -713,12 +655,26 @@
   background: #ff6b6b;
   z-index: 3;
   cursor: move;
-  /*-webkit-transform: rotate(360deg);*/
-  /*-ms-transform: rotate(360deg);*/
-  /*transform: rotate(360deg);*/
-  /*-webkit-transform-origin: 50% 50%;*/
-  /*-ms-transform-origin: 50% 50%;*/
-  /*transform-origin: 50% 50%;*/
+  -webkit-animation: rotate 6s linear infinite;
+  /*animation: rotate 6s linear infinite;*/
+  /*-webkit-transform: matrix(a, c, b, d, tx, ty);*/
+
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
 }
 
 .picky-date-time-clock__clock-hand--minute {
@@ -731,7 +687,7 @@
 
 .picky-date-time-clock__clock-hand--hour {
   width: 3px;
-  height: 35px;
+  height: 50px;
   background: #495057;
   z-index: 1;
   cursor: move
@@ -767,7 +723,6 @@
   cursor: pointer;
   padding: 5px 10px;
   border: 1px solid #ced4da;
-  -webkit-transition: all .3s;
   transition: all .3s;
   background: #fff
 }
@@ -782,7 +737,6 @@
   speak: none;
   font-style: normal;
   font-weight: 400;
-  -webkit-font-feature-settings: normal;
   font-feature-settings: normal;
   font-variant: normal;
   text-transform: none;
@@ -794,19 +748,15 @@
 .picky-date-time {
   opacity: 0;
   position: relative;
-  -webkit-box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.10), 0 0 4px 0 rgba(0, 0, 0, 0.08);
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.10), 0 0 4px 0 rgba(0, 0, 0, 0.08);
   display: inline-block;
-  -webkit-transition: all .3s;
   transition: all .3s;
-  -webkit-transform: translateY(-1em) perspective(600px) rotateX(10deg);
   transform: translateY(-1em) perspective(600px) rotateX(10deg);
   padding: 20px
 }
 
 .picky-date-time.visible {
   opacity: 1;
-  -webkit-transform: translateY(0) perspective(600px) rotateX(0);
   transform: translateY(0) perspective(600px) rotateX(0);
   background-color: #d3d3d3
 }
@@ -877,3 +827,4 @@
   }
 }
 
+/*# sourceMappingURL=react-picky-date-time.css.map*/

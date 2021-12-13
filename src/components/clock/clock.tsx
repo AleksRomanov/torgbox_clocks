@@ -1,10 +1,5 @@
-import dayjs from 'dayjs';
-
 function Clock(): JSX.Element {
 
-  // @ts-ignore
-  // @ts-ignore
-  // @ts-ignore
   return (
     <div style={{margin: '0px auto', width: '100%'}}>
       <h2 style={{textAlign: 'center'}}>Torgbox Clocks</h2>
@@ -88,7 +83,7 @@ function Clock(): JSX.Element {
                   </div>
                   <div className="picky-date-time-clock__inputer-wrapper">
                     <div className="picky-date-time-clock__inputer">
-                      <input className="picky-date-time-clock__input" value={dayjs()}/>
+                      <input className="picky-date-time-clock__input" value="02:54:06 AM"/>
                     </div>
                     <div className="picky-date-time-clock__inline-div picky-date-time-clock__inline-div--middle">
                       <svg className="picky-date-time-clock__icon picky-date-time-clock__icon--schedule picky-date-time-schedule" xmlns="http://www.w3.org/2000/svg" height="15" viewBox="0 0 24 24" width="15" style={{verticalAlign: 'middle'}}>
