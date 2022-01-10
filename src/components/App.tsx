@@ -3,7 +3,6 @@ import {useEffect, useState} from 'react';
 import dayjs from 'dayjs';
 
 function App(): JSX.Element {
-  // const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()];
   const [value, setValue] = useState(new Date());
 
   useEffect(() => {
@@ -31,8 +30,6 @@ function App(): JSX.Element {
                     <div className="picky-date-time-clock__inputer-wrapper">
                       <div className="picky-date-time-clock__inputer">
                         <input className="picky-date-time-clock__input" value={dayjs().format('HH:mm:ss')}/>
-                      </div>
-                      <div className="picky-date-time-clock__inline-div picky-date-time-clock__inline-div--middle">
                       </div>
                     </div>
                   </div>
