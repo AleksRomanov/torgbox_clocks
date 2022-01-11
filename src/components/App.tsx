@@ -19,7 +19,7 @@ function App(): JSX.Element {
   return (
     <div style={{margin: '0 auto', width: '100%'}}>
       <h2 style={{textAlign: 'center'}}>Torgbox Clocks</h2>
-      <Clock value={value}/>
+      <Clock size={200} value={value}/>
       <div>
         <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
           <div>
