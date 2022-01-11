@@ -676,19 +676,6 @@
   cursor: move
 }
 
-.picky-date-time-clock__clock-hand--hour {
-  width: 3px;
-  height: 35px;
-  background: #495057;
-  z-index: 1;
-  cursor: move
-}
-
-.picky-date-time-clock__today {
-  font-size: 12px;
-  margin-top: 10px
-}
-
 .picky-date-time-clock__inline-span span {
   display: inline-block;
   vertical-align: middle
