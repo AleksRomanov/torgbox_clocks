@@ -1,6 +1,8 @@
 import Clock from 'react-clock';
 import {useEffect, useState} from 'react';
 import dayjs from 'dayjs';
+import LocationsList from './locations-list/locations-list';
+import { BrowserRouter } from 'react-router-dom';
 
 function App(): JSX.Element {
   const [value, setValue] = useState(new Date());
@@ -17,21 +19,22 @@ function App(): JSX.Element {
   }, []);
 
   return (
-    <div style={{margin: '0 auto', width: '100%'}}>
-      <h2 style={{textAlign: 'center'}}>Torgbox Clocks</h2>
-      <Clock size={200} value={value}/>
-      <div>
-        <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
-          <div>
+    <BrowserRouter>
+      <div style={{margin: '0 auto', width: '100%'}}>
+        <h2 style={{textAlign: 'center'}}>Torgbox Clocks</h2>
+        <Clock size={200} value={value}/>
+        <div>
+          <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
             <div>
-              <div className="picky-date-time visible">
+              <div>
                 <div>
-                  <div>
-                    <div className="picky-date-time-clock__inputer-wrapper">
-                      <div className="picky-date-time-clock__inputer">
-                        <input className="picky-date-time-clock__input" value={dayjs().format('HH:mm:ss')}/>
-                      </div>
+                  <div className="picky-date-time-clock__inputer-wrapper">
+                    <div className="picky-date-time-clock__inputer">
+                      <input className="picky-date-time-clock__input" value={dayjs().format('HH:mm:ss')}/>
                     </div>
+                  </div>
+                  <div className="locations container">
+                    <LocationsList/>
                   </div>
                 </div>
               </div>
@@ -39,7 +42,7 @@ function App(): JSX.Element {
           </div>
         </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
