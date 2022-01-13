@@ -28,6 +28,33 @@ export enum APIRoute {
 //   Hotel = 'hotel',
 // }
 
+// export const Data = {
+//   countries: [
+//     {
+//       name: 'Germany',
+//       states: [
+//         {
+//           name: 'A',
+//           cities: ['Duesseldorf', 'Leinfelden-Echterdingen', 'Eschborn'],
+//         },
+//       ],
+//     },
+//     {name: 'Spain', states: [{name: 'B', cities: ['Barcelona']}]},
+//
+//     {name: 'USA', states: [{name: 'C', cities: ['Downers Grove']}]},
+//     {
+//       name: 'Mexico',
+//       states: [{name: ['D', 'F', 'H'], cities: ['Puebla']}],
+//     },
+//     {
+//       name: 'India',
+//       states: [
+//         {name: 'E', cities: ['Delhi', 'Kolkata', 'Mumbai', 'Bangalore']},
+//       ],
+//     },
+//   ],
+// };
+
 export const CitiesList = [
   {
     name: 'Калиниград',
@@ -36,9 +63,13 @@ export const CitiesList = [
       longitude: 2.351499,
     },
   },
-  // {
-  //   name: 'Paris',
-  // },
+  {
+    name: 'Москва',
+    location: {
+      latitude: 48.85661,
+      longitude: 2.351499,
+    },
+  },
   // {
   //   name: 'Калиниград',
   //   timezone: '+2',

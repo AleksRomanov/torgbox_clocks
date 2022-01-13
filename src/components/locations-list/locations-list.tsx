@@ -1,12 +1,10 @@
 import {Link} from 'react-router-dom';
 import {CitiesList} from '../../constants';
-import {nanoid} from 'nanoid';
-// import {memo} from 'react';
 import {useAppDispatch} from '../../hooks/useAppDispatch';
 import {useAppSelector} from '../../hooks/useAppSelector';
 import {City} from '../../types/city';
 import {selectCity} from '../../store/offers-reducer/offers-reducer';
-// import {memo} from 'react';
+// import React from 'react';
 
 function LocationsList(): JSX.Element {
   const dispatch = useAppDispatch();
@@ -19,19 +17,32 @@ function LocationsList(): JSX.Element {
   };
 
   function CityItemRender(city: City) {
-    const isCurrentCityClass = currentCity === city ? 'tabs__item--active' : '';
+    // const [selectedCity] = React.useState();
+    // const isCurrentCityClass = currentCity === city ? 'tabs__item--active' : '';
     return (
-      <li className="locations__item" key={nanoid()}>
-        {/*<Link onClick={() => onCityChoose(city)} to="#" className="locations__item-link tabs__item">*/}
-        <Link onClick={() => onCityChoose(city)} to="#" className={`locations__item-link tabs__item ${isCurrentCityClass}`}>
-          <span>{city.name}</span>
+      <li style={{listStyle: 'none'}} className="locations__item">
+        <Link onClick={() => onCityChoose(city)} to="#" className="locations__item-link tabs__item">
+          {/*<Link onClick={() => onCityChoose(city)} to="#" className={`locations__item-link tabs__item ${isCurrentCityClass}`}>*/}
+          <div>
+            <label></label>
+            <select
+              placeholder="City"
+              value={city.name}
+              onChange={() => city.name}
+            >
+              <option>--Choose City--</option>
+              {/*{CitiesList.map((e) => (*/}
+              {/*  <option value={city.name} key={currentCity.name}/>*/}
+              {/*))}*/}
+            </select>
+          </div>
         </Link>
       </li>
     );
   }
 
   return (
-    <ul className="locations__list tabs__list">
+    <ul style={{padding: '0', textAlign: 'center'}} className="locations__list tabs__list">
       {CitiesList.map((city: City) => (
         CityItemRender(city)
       ))}
@@ -39,5 +50,4 @@ function LocationsList(): JSX.Element {
   );
 }
 
-// export default memo(LocationsList);
 export default LocationsList;
