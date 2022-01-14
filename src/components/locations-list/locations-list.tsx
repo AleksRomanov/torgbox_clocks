@@ -29,11 +29,7 @@ function LocationsList(): JSX.Element {
           <div>
             <select>
               {/*<option>{dayjs(new Date().toLocaleString('en-US', {timeZone: 'America/Los_Angeles'})).format('h:mA')}</option>*/}
-              <option>{city.name}</option>
-              {/*<option>{dayjs(city.name)}</option>*/}
-              <option>text2</option>
-              <option>text3</option>
-              <option>text4</option>
+              <option value={city.name}>{city.name}</option>
             </select>
             {/*<label></label>*/}
             {/*<select*/}

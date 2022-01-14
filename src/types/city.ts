@@ -7,7 +7,7 @@
 
 type City = {
   name: string,
-  timezone: unknown,
+  timezone: string,
 }
 
 export type {City};

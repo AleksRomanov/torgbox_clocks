@@ -11,6 +11,22 @@ export const CitiesList = [
     name: 'Москва',
     timezone: '+3',
   },
+  {
+    name: 'Самара',
+    timezone: '+4',
+  },
+  {
+    name: 'Екатеринбург',
+    timezone: '+5',
+  },
+  {
+    name: 'Омск',
+    timezone: '+6',
+  },
+  {
+    name: 'Красноярск',
+    timezone: '+7',
+  },
   // {
   //   name: 'Калиниград',
   //   timezone: '+2',
