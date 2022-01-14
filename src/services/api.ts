@@ -1,8 +1,9 @@
 import {BaseQueryFn} from '@reduxjs/toolkit/query';
 import axios, {AxiosError, AxiosRequestConfig, AxiosResponse} from 'axios';
-const BASE_URL = 'https://localhost/api';
-const API_TIMEOUT = 5000;
 
+const BASE_URL = '/';
+// const BASE_URL = 'https://drive.google.com/file/';
+const API_TIMEOUT = 5000;
 
 const createAPI = (): BaseQueryFn => {
   const api = axios.create({
@@ -17,13 +18,16 @@ const createAPI = (): BaseQueryFn => {
 
   api.interceptors.request.use(
     (config: AxiosRequestConfig) => {
+      // if (config.headers) {
+      // // config.headers['x-token'] = token;
+      //
+      // config.headers['Access-Control-Allow-Origin'] = 'http://localhost:3000/';
+      // config.headers['Access-Control-Allow-Credentials'] = 'true';
+      // //   config.headers.append('Access-Control-Allow-Credentials', 'true');
+      // }
 
-      if (config.url && config.url.indexOf('undefined') !== -1) {
-        return Promise.reject('Canceling nearby nearby offers fetching on manin page');
-      }
       return config;
-    },
-  );
+    });
   return api;
 };
 

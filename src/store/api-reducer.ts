@@ -4,8 +4,8 @@ import {createApi} from '@reduxjs/toolkit/dist/query/react';
 // import {APIRoute} from '../constants';
 import createAPI from '../services/api';
 import {City} from '../types/city';
-import {TimeZones} from '../constants';
-import { adaptDataFromServer } from '../utils/data-server-adapter';
+// import {TimeZones} from '../constants';
+// import { adaptDataFromServer } from '../utils/data-server-adapter';
 // import {adaptDataFromServer} from '../utils/data-server-adapter';
 // import {CitiesList} from '../constants';
 // import { adaptDataFromServer } from '../utils/data-server-adapter';
@@ -26,10 +26,10 @@ export const apiReducer = createApi({
   endpoints: (builder) => ({
     fetchTimeZones: builder.query<City[], void>({
       query: () => ({
-        url: `${TimeZones}`,
+        url: 'timezones.json',
         method: 'get',
       }),
-      transformResponse: (response: City) => adaptDataFromServer(response),
+      // transformResponse: (response: City) => adaptDataFromServer(response),
     }),
   }),
 });

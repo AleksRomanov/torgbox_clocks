@@ -1,17 +1,18 @@
 import {configureStore} from '@reduxjs/toolkit';
-import offersReducer from './timeZones-reducer/timeZones-reducer';
+// import timeZonesReducer from './timeZones-reducer/timeZones-reducer';
 import {apiReducer} from './api-reducer';
 // import {redirect} from './middlewares/redirect';
 
 export const store = configureStore({
   reducer: {
-    offersReducer,
+    // timeZonesReducer,
     [apiReducer.reducerPath]: apiReducer.reducer,
   },
   middleware: (gDM) => gDM({
     thunk: {
       extraArgument: apiReducer,
-    }}).concat(apiReducer.middleware),
+    },
+  }).concat(apiReducer.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
