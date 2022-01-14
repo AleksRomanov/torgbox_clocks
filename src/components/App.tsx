@@ -2,7 +2,10 @@ import Clock from 'react-clock';
 import {useEffect, useState} from 'react';
 import dayjs from 'dayjs';
 import LocationsList from './locations-list/locations-list';
-import { BrowserRouter } from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
+// import {CitiesList} from '../constants';
+// import {CitiesList} from '../constants';
+// import locationsList from './locations-list/locations-list';
 
 function App(): JSX.Element {
   const [value, setValue] = useState(new Date());

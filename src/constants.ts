@@ -1,74 +1,15 @@
-// export const enum AppRoute {
-//   Main = '/',
-//   Login = '/login',
-//   Favorites = '/favorites',
-//   Offer = '/offer/:id',
-//   OfferLink = '/offer/',
+// export enum APIRoute {
+//   Cities = '/cities/',
 // }
-//
-// export const enum AuthorizationStatus {
-//   Auth = 'AUTH',
-//   NoAuth = 'NO_AUTH',
-//   Unknown = 'UNKNOWN',
-// }
-//
-export enum APIRoute {
-  Offers = '/hotels/',
-  Login = '/login/',
-  Logout = '/logout/',
-  Comments = '/comments/',
-  Favorite = '/favorite/',
-}
-
-//
-// export const enum OfferKind {
-//   Apartment = 'apartment',
-//   Room = 'room',
-//   House = 'house',
-//   Hotel = 'hotel',
-// }
-
-// export const Data = {
-//   countries: [
-//     {
-//       name: 'Germany',
-//       states: [
-//         {
-//           name: 'A',
-//           cities: ['Duesseldorf', 'Leinfelden-Echterdingen', 'Eschborn'],
-//         },
-//       ],
-//     },
-//     {name: 'Spain', states: [{name: 'B', cities: ['Barcelona']}]},
-//
-//     {name: 'USA', states: [{name: 'C', cities: ['Downers Grove']}]},
-//     {
-//       name: 'Mexico',
-//       states: [{name: ['D', 'F', 'H'], cities: ['Puebla']}],
-//     },
-//     {
-//       name: 'India',
-//       states: [
-//         {name: 'E', cities: ['Delhi', 'Kolkata', 'Mumbai', 'Bangalore']},
-//       ],
-//     },
-//   ],
-// };
 
 export const CitiesList = [
   {
     name: 'Калиниград',
-    location: {
-      latitude: 48.85661,
-      longitude: 2.351499,
-    },
+    timezone: '+2',
   },
   {
     name: 'Москва',
-    location: {
-      latitude: 48.85661,
-      longitude: 2.351499,
-    },
+    timezone: '+3',
   },
   // {
   //   name: 'Калиниград',
@@ -116,30 +57,42 @@ export const CitiesList = [
   // }
 ];
 
-// export const URL_MARKER_DEFAULT =
-//   'https://assets.htmlacademy.ru/content/intensive/javascript-1/demo/interactive-map/pin.svg';
-//
-// export const URL_MARKER_CURRENT =
-//   'https://assets.htmlacademy.ru/content/intensive/javascript-1/demo/interactive-map/main-pin.svg';
-//
-// export const offerCardClasses = {
-//   mainArticleClass: 'cities__place-card place-card',
-//   mainImageData: {imageClass: 'cities__image-wrapper place-card__image-wrapper', imageSizes: {width: '260', height: '200'}},
-//   favoritesArticleClass: 'favorites__card place-card',
-//   favoritesImageData: {imageClass: 'favorites__image-wrapper place-card__image-wrapper', imageSizes: {width: '150', height: '110'}},
-// };
-//
-// export enum SortType {
-//   Popular = 'Popular',
-//   LowToHighPrice = 'Price: low to high',
-//   HighToLowPrice = 'Price: high to low',
-//   TopRated = 'Top rated first',
+// export const enum AppRoute {
+//   Main = '/',
+//   Login = '/login',
+//   Favorites = '/favorites',
+//   Offer = '/offer/:id',
+//   OfferLink = '/offer/',
 // }
+// export const Data = {
+//   countries: [
+//     {
+//       name: 'Germany',
+//       states: [
+//         {
+//           name: 'A',
+//           cities: ['Duesseldorf', 'Leinfelden-Echterdingen', 'Eschborn'],
+//         },
+//       ],
+//     },
+//     {name: 'Spain', states: [{name: 'B', cities: ['Barcelona']}]},
+//
+//     {name: 'USA', states: [{name: 'C', cities: ['Downers Grove']}]},
+//     {
+//       name: 'Mexico',
+//       states: [{name: ['D', 'F', 'H'], cities: ['Puebla']}],
+//     },
+//     {
+//       name: 'India',
+//       states: [
+//         {name: 'E', cities: ['Delhi', 'Kolkata', 'Mumbai', 'Bangalore']},
+//       ],
+//     },
+//   ],
+// };
 
 // export const citiesContainerEmptyClass = 'cities__places-container container cities__places-container--empty';
-export const citiesContainerClass = 'cities__places-container container';
+// export const citiesContainerClass = 'cities__places-container container';
 // export const citiesSectionEmptyClass = 'cities__no-places';
 // export const citiesSectionClass = 'cities__places places';
 
-// export const fullPercentageCount = 100;
-// export const countOfStars = 5;

@@ -1,6 +1,7 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {CitiesList} from '../../constants';
 import {City} from '../../types/city';
+// import {CityType} from '../../types/cityType';
 // import {OfferType} from '../../types/offerType';
 // import {getOffersByCity} from '../../utils/utils';
 
