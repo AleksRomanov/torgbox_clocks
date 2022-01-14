@@ -38,7 +38,7 @@ function App(city: City): JSX.Element {
                     </div>
                   </div>
                   <div className="locations container">
-                    <LocationsList/>
+                    <LocationsList />
                   </div>
                 </div>
               </div>
