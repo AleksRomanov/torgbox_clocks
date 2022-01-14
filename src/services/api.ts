@@ -1,6 +1,6 @@
 import {BaseQueryFn} from '@reduxjs/toolkit/query';
 import axios, {AxiosError, AxiosRequestConfig, AxiosResponse} from 'axios';
-const BASE_URL = 'https://8.react.pages.academy/six-cities';
+const BASE_URL = 'https://localhost/api';
 const API_TIMEOUT = 5000;
 
 

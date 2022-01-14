@@ -3,11 +3,12 @@ import {useEffect, useState} from 'react';
 import dayjs from 'dayjs';
 import LocationsList from './locations-list/locations-list';
 import {BrowserRouter} from 'react-router-dom';
+import {City} from '../types/city';
 // import {CitiesList} from '../constants';
 // import {CitiesList} from '../constants';
 // import locationsList from './locations-list/locations-list';
 
-function App(): JSX.Element {
+function App(city: City): JSX.Element {
   const [value, setValue] = useState(new Date());
 
   useEffect(() => {
@@ -25,7 +26,7 @@ function App(): JSX.Element {
     <BrowserRouter>
       <div style={{margin: '0 auto', width: '100%'}}>
         <h2 style={{textAlign: 'center'}}>Torgbox Clocks</h2>
-        <Clock size={200} value={value}/>
+        <Clock hourHandLength={30} size={200} value={value}/>
         <div>
           <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
             <div>

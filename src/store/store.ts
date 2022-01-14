@@ -1,5 +1,5 @@
 import {configureStore} from '@reduxjs/toolkit';
-import offersReducer from './offers-reducer/offers-reducer';
+import offersReducer from './timeZones-reducer/timeZones-reducer';
 import {apiReducer} from './api-reducer';
 // import {redirect} from './middlewares/redirect';
 

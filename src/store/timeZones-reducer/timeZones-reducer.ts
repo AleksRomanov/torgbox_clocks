@@ -1,6 +1,7 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {CitiesList} from '../../constants';
+// import {CitiesList} from '../../constants';
 import {City} from '../../types/city';
+import {TimeZones} from '../../constants';
 // import {CityType} from '../../types/cityType';
 // import {OfferType} from '../../types/offerType';
 // import {getOffersByCity} from '../../utils/utils';
@@ -15,11 +16,11 @@ interface CounterState {
 const initialState: CounterState = {
   // offers: [],
   // pickedOffers: [],
-  currentCity: CitiesList[0],
+  currentCity: TimeZones[0],
   // favoritesOffers: [],
 };
 
-export const offersReducer = createSlice({
+export const timeZonesReducer = createSlice({
   name: 'offersReducer',
   initialState,
   reducers: {
@@ -58,6 +59,6 @@ export const offersReducer = createSlice({
 });
 
 // export const {pickFavoritesOffers, setOfferFavoriteStatus, selectCity, pickOffers, loadOffers, setNearbyOffers} = offersReducer.actions;
-export const {selectCity} = offersReducer.actions;
+export const {selectCity} = timeZonesReducer.actions;
 
-export default offersReducer.reducer;
+export default timeZonesReducer.reducer;
